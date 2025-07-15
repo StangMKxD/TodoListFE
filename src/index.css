@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #1d2129;
+}
+
+/* .List {
+  @apply border-[1px] border-[#dddfe2] border-solid w-[576px] my-[20px] mx-auto bg-[#ffffff] rounded-[10px];
+} */
+
+.animated-strike {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.animated-strike::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 53%;
+  height: 2px;
+  width: 0;
+  background-color: gray;
+  transform: translateY(-50%);
+  transition: width 0.4s ease-in-out;
+}
+
+.animated-strike.complete::after {
+  width: 100%;
+}
