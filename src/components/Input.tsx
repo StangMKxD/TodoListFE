@@ -73,7 +73,7 @@ const Input = () => {
           Add
         </button>
           </div>
-        <div className="w-[300px] sm:w-full my-[20px] mx-auto flex flex-col space-y-2 rounded-2xl items-center mt-4 break-words whitespace-normal">
+        <div className="w-[300px] sm:w-full my-[20px] mx-auto flex flex-col space-y-2 rounded-2xl items-center break-words whitespace-normal">
           {todos.map((item, index) => (
             <List key={index} item={item} loadData={loadData} />
           ))}

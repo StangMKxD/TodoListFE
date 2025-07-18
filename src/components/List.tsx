@@ -48,7 +48,7 @@ const List = ({ item, loadData }: TodoProps) => {
 
   return (
     <>
-    <div className="flex justify-between items-center bg-white rounded-xl p-3 shadow w-full border">
+    <div className="flex justify-between items-center bg-white rounded-xl p-3 shadow w-full border border-[#dbdbdb]">
       <div
         className={`text-[16px] w-full sm:w-[400px] break-words whitespace-normal ${
           complete ? "line-through text-gray-400" : ""
@@ -59,7 +59,7 @@ const List = ({ item, loadData }: TodoProps) => {
             type="text"
             value={title}
             onChange={handleOnChange}
-            className="border border-[#dbdbdb]  rounded w-full"
+            className="border px-1 py-1  rounded w-full"
           />
         ) : (
           <span>{title}</span>
@@ -102,7 +102,7 @@ const List = ({ item, loadData }: TodoProps) => {
       </div>
       
     </div>
-    <div className='flex sm:hidden w-full gap-2'>
+    <div className='flex sm:hidden w-full justify-center gap-2'>
       <button
           onClick={toggleComplete}
           className={`p-1 rounded text-white text-2xl ${
