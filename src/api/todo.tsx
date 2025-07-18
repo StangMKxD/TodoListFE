@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const ENDPOINT = "http://localhost:5000/api/todo";
+const ENDPOINT = import.meta.env.VITE_API_URL;
 
 export const getData = async() => 
     await axios.get(ENDPOINT);
